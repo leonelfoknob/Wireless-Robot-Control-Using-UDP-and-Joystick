@@ -13,21 +13,19 @@ This project demonstrates how to wirelessly control a robot (MFX1) using a Rampa
 ## How It Works
 
 1. Joystick Command Mapping
-The Rampage RMX23 Cockpit joystick is read using Pygame.
-Each input (button press, joystick movement) is mapped to a specific command (forward, backward, turn, etc.).
-The commands are transmitted as packets via the UDP protocol over a local network.
+    The Rampage RMX23 Cockpit joystick is read using Pygame.
+    Each input (button press, joystick movement) is mapped to a specific command.
 
 3. Data Transmission Over UDP
-A Python script on the sending side captures the joystick data and sends it to the IP address of the receiving machine over UDP.
-On the receiving machine, another Python script receives the data and sends it via serial to an Arduino, which reads the commands and performs corresponding actions.
+    A Python script on the sending side captures the joystick data and sends it to the IP address of the receiving machine over UDP.
 
 5. Arduino Integration with Robot
-The Arduino processes the commands received over the serial connection and sends control signals to the MFX1 robot's motors.
-The robot reacts accordingly, performing the movements specified by the joystick input.
+    The Arduino processes the commands received over the serial connection, map its to a specific command (forward, backward, turn, etc.) and sends control signals to the MFX1 robot's         motors,leds...
+    The robot reacts accordingly, performing the movements specified by the joystick input.
 
 7. Testing on MFX1 Robot
-The initial test with an Arduino and LCD to verify communication was successful.
-The system was then integrated into MFX1, achieving effective remote control within 1m, though latency became an issue beyond that range.
+    The initial test with an Arduino and LCD to verify communication was successful.
+    The system was then integrated into MFX1, achieving effective remote control within 1m, though latency became an issue beyond that range.
 
 ## Files Included
 Joystick Command Mapping Code (Python): Captures joystick input and sends commands over UDP.
@@ -35,5 +33,5 @@ Receiver Code (Python): Receives the UDP packets and forwards them to Arduino vi
 Arduino Code: Reads the serial data and translates it into movement commands for the robot.
 MFX1 Robot Control Code: Demonstrates real-time robot control using the joystick and UDP communication.
 
-## Diagram
+## Diagram and other support
 A full system diagram will be shared, detailing the communication between components (Joystick, computer, Wi-Fi, Arduino, and MFX1 robot).
