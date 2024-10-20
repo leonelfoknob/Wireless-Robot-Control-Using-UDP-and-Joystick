@@ -54,5 +54,5 @@ To get this project running and control the MFX1 robot (or Arduino for testing p
 
 
 ## Diagram and other support
-A full system diagram will be shared, detailing the communication between components (Joystick, computer, Wi-Fi, Arduino, and MFX1 robot).
+system diagram.
 ![sistem_diyagram](https://github.com/user-attachments/assets/b2941541-2131-4563-9b52-b46bf975e0e4)
