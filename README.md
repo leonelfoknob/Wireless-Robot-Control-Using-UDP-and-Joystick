@@ -31,25 +31,26 @@ This project demonstrates how to wirelessly control a robot (MFX1) using a Rampa
 To get this project running and control the MFX1 robot (or Arduino for testing purposes) using a joystick over a local network with UDP, follow the steps below:
 
 1. Setup the Receiver Side (Robot/Arduino)
-Connect your robot (MFX1) or Arduino to the receiver computer (the one that will decode the joystick commands).
-Upload the appropriate code:
-For MFX1 robot control, upload the mfx1_controled_by_rampage_over_udp.ino file to the Arduino onboard the MFX1 robot.
-For testing with an LCD, upload the receive_and_decode_joystick_command.ino file to an Arduino connected to an LCD screen. This will help verify joystick commands are being received and decoded correctly.
-Modify the joystick_command_receive_via_udp.py file:
-Change the COM port to match your Arduino's port (on Windows, it might look like COM3; on Linux, something like /dev/ttyUSB0).
-Set the baud rate to match the one you’re using in the Arduino code (e.g., 9600).
-Update the IP address and port in the Python code to the IP address and port of the receiver computer where the Arduino is connected.
+    - Connect your robot (MFX1) or Arduino to the receiver computer (the one that will decode the joystick commands).
+    - Upload the appropriate code:
+        - For MFX1 robot control, upload the mfx1_controled_by_rampage_over_udp.ino file to the Arduino onboard the MFX1 robot.
+        - For testing with an LCD, upload the receive_and_decode_joystick_command.ino file to an Arduino connected to an LCD screen. This will help verify joystick commands are being                received and decoded correctly.
+    - Modify the joystick_command_receive_via_udp.py file:
+        - Change the COM port to match your Arduino's port (on Windows, it might look like COM3; on Linux, something like /dev/ttyUSB0).
+        - Set the baud rate to match the one you’re using in the Arduino code (e.g., 9600).
+        - Update the IP address and port in the Python code to the IP address and port of the receiver computer where the Arduino is connected.
+
 2. Setup the Sender Side (Joystick/Command)
-On a separate computer (which will send joystick commands):
-Connect the joystick (Rampage RMX23 Cockpit USB Vibrating Joystick) to this machine.
-Modify the joystick_command_send_via_udp.py file:
-Update the IP address and port in the code to match the IP and port of the receiver computer where the Arduino or MFX1 robot is connected.
-Run the Python script on this computer: joystick_command_send_via_udp.py.
+    - On a separate computer (which will send joystick commands):
+        - Connect the joystick (Rampage RMX23 Cockpit USB Vibrating Joystick) to this machine.
+    - Modify the joystick_command_send_via_udp.py file:
+        - Update the IP address and port in the code to match the IP and port of the receiver computer where the Arduino or MFX1 robot is connected.
+    - Run the Python script on this computer: joystick_command_send_via_udp.py.
 3. Running the System
-Ensure both computers (sender and receiver) are connected to the same Wi-Fi network.
-First, on the receiver side, run the joystick_command_receive_via_udp.py script. This will start listening for incoming joystick commands.
-Next, on the sender side, run the joystick_command_send_via_udp.py script. This will begin sending joystick commands over the network to the receiver.
-If using the LCD for testing, you will see joystick inputs reflected on the screen. For the robot, it should start responding to joystick movements.
+    - Ensure both computers (sender and receiver) are connected to the same Wi-Fi network.
+    - First, on the receiver side, run the joystick_command_receive_via_udp.py script. This will start listening for incoming joystick commands.
+    - Next, on the sender side, run the joystick_command_send_via_udp.py script. This will begin sending joystick commands over the network to the receiver.
+    - If using the LCD for testing, you will see joystick inputs reflected on the screen. For the robot, it should start responding to joystick movements.
 
 
 ## Diagram and other support
