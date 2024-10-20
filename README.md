@@ -28,10 +28,11 @@ This project demonstrates how to wirelessly control a robot (MFX1) using a Rampa
     The system was then integrated into MFX1, achieving effective remote control within 1m, though latency became an issue beyond that range.
 
 ## Files Included
-Joystick Command Mapping Code (Python): Captures joystick input and sends commands over UDP.
-Receiver Code (Python): Receives the UDP packets and forwards them to Arduino via serial communication.
-Arduino Code: Reads the serial data and translates it into movement commands for the robot.
-MFX1 Robot Control Code: Demonstrates real-time robot control using the joystick and UDP communication.
+
+    Joystick Command Mapping Code (Python): Captures joystick input and sends commands over UDP.
+    Receiver Code (Python): Receives the UDP packets and forwards them to Arduino via serial communication.
+    Arduino Code: Reads the serial data and translates it into movement commands for the robot.
+    MFX1 Robot Control Code: Demonstrates real-time robot control using the joystick and UDP communication.
 
 ## Diagram and other support
 A full system diagram will be shared, detailing the communication between components (Joystick, computer, Wi-Fi, Arduino, and MFX1 robot).
