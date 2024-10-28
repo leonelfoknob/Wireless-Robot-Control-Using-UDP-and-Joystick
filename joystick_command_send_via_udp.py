@@ -3,9 +3,12 @@
 import pygame
 import socket
 import pickle
- 
-UDP_IP = "127.0.0.1"
+
+#UDP_IP = "127.0.0.1"#lookup
+UDP_IP = "192.168.1.32" #my ip adress MakinaFleo WİFİ
+#UDP_IP = "192.168.1.7" #my ip adress robotic_lab WİFİ
 UDP_PORT = 5005
+
 sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 
 print("UDP target IP: %s" % UDP_IP)
