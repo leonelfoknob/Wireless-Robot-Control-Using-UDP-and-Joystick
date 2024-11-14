@@ -2,6 +2,8 @@
 
 This project demonstrates how to wirelessly control a robot (MFX1) using a Rampage RMX23 Cockpit USB Vibrating Joystick. The joystick commands are sent over a local network using the UDP protocol, and received on an Arduino via another computer( Jetson, Latte panda, Raspberry pi... ) , which then forwards the data to the robot for control. The system allows seamless control without physical connection, leveraging a Python script for the communication.
 
+### Video demonstration : https://youtu.be/-ooAX8vIzwI
+
 - Current Setup
     - Joystick Control: The Rampage RMX23 joystick is used with the Pygame library to capture and map the user’s commands. Ysou can find more details : https://github.com/leonelfoknob/Rampage-RMX23-Cockpit-Joystick-and-Pygame-library
     - Data Transmission: The commands are transmitted over a 5GHz Wi-Fi network using UDP protocol. The data is first sent to a receiving computer, which then forwards it to an Arduino         via a   serial connection.
